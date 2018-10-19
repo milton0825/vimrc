@@ -1,6 +1,32 @@
 " milton0825
 " Reference: https://dougblack.io/words/a-good-vimrc.html
 
+" vundle {{{
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+" https://github.com/Valloric/YouCompleteMe
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+" https://vimawesome.com/plugin/fugitive-vim
+Plugin 'tpope/vim-fugitive'
+
+" https://vimawesome.com/plugin/ctrlp-vim-red
+Plugin 'kien/ctrlp.vim'
+
+" https://vimawesome.com/plugin/ag-vim
+Plugin 'rking/ag.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on
+" }}}
 " color {{{
 
 " set color scheme
@@ -156,6 +182,9 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
+" }}}
+" keys {{{
+set backspace=indent,eol,start
 " }}}
 " organization {{{
 
